@@ -1,0 +1,15 @@
+[submodule "skills/uzi-skill"]
+	path = skills/uzi-skill
+	url = https://github.com/wbh604/uzi-skill.git
+[submodule "skills/TradingAgents"]
+	path = skills/TradingAgents
+	url = https://github.com/TauricResearch/TradingAgents.git
+[submodule "skills/buffett-skills"]
+	path = skills/buffett-skills
+	url = https://github.com/agi-now/buffett-skills.git
+[submodule "skills/QuantDinger"]
+	path = skills/QuantDinger
+	url = https://github.com/brokermr810/QuantDinger.git
+[submodule "skills/serenity-skill"]
+	path = skills/serenity-skill
+	url = https://gitcode.com/gh_mirrors/se/serenity-skill.git
