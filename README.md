@@ -127,13 +127,17 @@ python scripts/run_stock_analysis.py --ticker 600519.SH
 python scripts/run_research.py --theme "A股AI半导体" --market A-share
 ```
 
-### With Claude Code (Recommended)
+### With Codex / Claude Code (Recommended)
 
 ```bash
-# Copy the SKILL orchestration file into your project
+# Install into Codex
+bash scripts/install_codex_skill.sh
+
+# Or copy the SKILL orchestration file into a Claude Code project
+mkdir -p /your-project/.claude/skills/investagent
 cp SKILL.md /your-project/.claude/skills/investagent/
 
-# Then in Claude Code chat, just say:
+# Then in Codex / Claude Code chat, just say:
 # "深度分析宁德时代" or "研究A股CPO产业链"
 ```
 

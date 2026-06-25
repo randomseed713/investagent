@@ -127,13 +127,17 @@ python scripts/run_stock_analysis.py --ticker 600519.SH
 python scripts/run_research.py --theme "A股AI半导体" --market A-share
 ```
 
-### 在 Claude Code 中使用（推荐）
+### 在 Codex / Claude Code 中使用（推荐）
 
 ```bash
-# 将 SKILL 编排文件复制到您的项目中
+# 安装到 Codex
+bash scripts/install_codex_skill.sh
+
+# 或将 SKILL 编排文件复制到 Claude Code 项目中
+mkdir -p /your-project/.claude/skills/investagent
 cp SKILL.md /your-project/.claude/skills/investagent/
 
-# 然后在 Claude Code 的对话中直接说：
+# 然后在 Codex / Claude Code 的对话中直接说：
 # "深度分析宁德时代"  或  "研究A股CPO产业链"
 ```
 

@@ -4,7 +4,7 @@ This guide covers three ways to use InvestAgent:
 
 1. **Quick Start** — for one-off research tasks
 2. **Full Installation** — for daily automated use
-3. **Claude Code / Cursor** — for AI-editor native use
+3. **Claude Code / Cursor / Codex** — for AI-editor native use
 
 ---
 
@@ -99,9 +99,31 @@ The QuantDinger backtest API will be available at `http://localhost:5000`.
 
 This is the **recommended approach** for most users — InvestAgent was designed from the ground up as a "SKILL" (a concept used by Claude Code / Cursor-style AI editors).
 
+### Codex
+
+```bash
+# Install the full InvestAgent skill bundle into Codex
+bash scripts/install_codex_skill.sh
+
+# Optional: choose a custom Codex home or destination
+CODEX_HOME=$HOME/.codex bash scripts/install_codex_skill.sh
+bash scripts/install_codex_skill.sh /absolute/path/to/codex/skills/investagent
+```
+
+The installer copies `SKILL.md` plus the supporting docs, scripts, references, and integrated framework directories into `${CODEX_HOME:-$HOME/.codex}/skills/investagent`. Restart Codex or reload skills, then ask: `使用 investagent 深度分析贵州茅台`.
+
+If the integrated framework files are missing, initialize submodules first:
+
+```bash
+git submodule update --init --recursive
+bash scripts/install_codex_skill.sh
+```
+
+### Claude Code / Cursor
+
 ```bash
 # 1. Clone into a skills directory in your project
-mkdir -p /your-project/.claude/skills
+mkdir -p /your-project/.claude/skills/investagent
 cp SKILL.md /your-project/.claude/skills/investagent/
 
 # 2. Start chatting with the agent
